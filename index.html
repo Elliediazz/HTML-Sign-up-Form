@@ -15,17 +15,27 @@
         <form method="GET" action="results.html"> <!-- TODO: Set Action and Method Properties -->
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <span class="required-field">*</span>
+                <input type="text" id="firstname" name="firstname" required 
+                    minlength="2"
+                    maxlength="35"/>
                 <!-- TODO: Create a "lastname" input with type "text" -->
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="laastname">
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" required
+                    minlength="2"
+                    maxlength="35"/>
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <h5>Must 21 or older to Enter the Contest.</h5>
             </div>
             <!-- TODO: Make fieldset and legend -->
             <!-- Todo: Email Input -->
             <fieldset>
                 <legend>Your Contact Info.</legend>
                 <label for="email"> Your Email </label>
-                <input type="email" id="email" name="email">
+                <span class="required-field">*</span>
+                <input type="email" id="email" name="email" required>
             </fieldset>
             <!-- Todo: Street Address Input -->
             <label for="streetAddress"> Your Street Address</label>
@@ -87,7 +97,7 @@
                 <option value="WY">Wyoming</option>
             </select>
             <label for="zipCode"> Zip Code</label>
-            <input type="text" id="zipCode" name="zipCode">
+            <input type="number" id="zipCode" name="zipCode">
             <!-- TODO: Second fieldset -->
             <!-- TODO: Radio buttons for selecting preferred destination -->
             <fieldset>
